@@ -8,6 +8,9 @@ filetype off
 " Turn on syntax highlighting
 syntax on
 
+" Reduce update time
+set updatetime=2000
+
 " For plugins to load correctly
 filetype plugin indent on
 
@@ -82,8 +85,23 @@ map <leader>q gqip
 set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
+let g:rustfmt_autosave = 1
+
 " Color scheme (terminal)
 set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+colorscheme elflord
+
+" Ycm
+nnoremap <F12> :YcmCompleter GoToDefinition<CR>
+nnoremap <F11> :YcmCompleter GoToReferences<CR>
+nnoremap <F2> :YcmCompleter RefactorRename 
+nnoremap <leader>fi :YcmCompleter FixIt<CR>
+
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" Plugins
+" execute 'packadd YouCompleteMe'
+
