@@ -6,6 +6,8 @@ xcompmgr &
 nitrogen --restore &
 dwmblocks 2>&1 >/dev/null &
 
+redshift
+
 XNOTIFY_FIFO="$HOME/.cache/xnotify$DISPLAY.fifo"
 export XNOTIFY_FIFO
 rm -f $XNOTIFY_FIFO
